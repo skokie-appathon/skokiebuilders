@@ -27,6 +27,8 @@
 		19A2567D1B1A200000EBF35A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A2567C1B1A200000EBF35A /* libz.dylib */; };
 		19A2567F1B1A200700EBF35A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A2567E1B1A200700EBF35A /* libsqlite3.dylib */; };
 		19A256811B1A33A800EBF35A /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A256801B1A33A800EBF35A /* Cell.swift */; };
+		19A256871B1A4AF900EBF35A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A256861B1A4AF900EBF35A /* MapViewController.swift */; };
+		19A256891B1A4D8C00EBF35A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A256881B1A4D8C00EBF35A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		19A2567C1B1A200000EBF35A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		19A2567E1B1A200700EBF35A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		19A256801B1A33A800EBF35A /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		19A256861B1A4AF900EBF35A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		19A256881B1A4D8C00EBF35A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A256891B1A4D8C00EBF35A /* MapKit.framework in Frameworks */,
 				19A2567F1B1A200700EBF35A /* libsqlite3.dylib in Frameworks */,
 				19A2567D1B1A200000EBF35A /* libz.dylib in Frameworks */,
 				19A2567B1B1A1FEA00EBF35A /* SystemConfiguration.framework in Frameworks */,
@@ -99,6 +104,7 @@
 		19A256381B1A1ED000EBF35A = {
 			isa = PBXGroup;
 			children = (
+				19A256881B1A4D8C00EBF35A /* MapKit.framework */,
 				19A2567E1B1A200700EBF35A /* libsqlite3.dylib */,
 				19A2567C1B1A200000EBF35A /* libz.dylib */,
 				19A2567A1B1A1FEA00EBF35A /* SystemConfiguration.framework */,
@@ -132,6 +138,7 @@
 				19A256461B1A1ED000EBF35A /* AppDelegate.swift */,
 				19A256481B1A1ED000EBF35A /* FirstViewController.swift */,
 				19A2564A1B1A1ED000EBF35A /* SecondViewController.swift */,
+				19A256861B1A4AF900EBF35A /* MapViewController.swift */,
 				19A2564C1B1A1ED000EBF35A /* Main.storyboard */,
 				19A256801B1A33A800EBF35A /* Cell.swift */,
 				19A2564F1B1A1ED000EBF35A /* Images.xcassets */,
@@ -269,6 +276,7 @@
 				19A2564B1B1A1ED000EBF35A /* SecondViewController.swift in Sources */,
 				19A256811B1A33A800EBF35A /* Cell.swift in Sources */,
 				19A256471B1A1ED000EBF35A /* AppDelegate.swift in Sources */,
+				19A256871B1A4AF900EBF35A /* MapViewController.swift in Sources */,
 				19A256491B1A1ED000EBF35A /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

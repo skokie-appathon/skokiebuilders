@@ -13,7 +13,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var locationManager: CLLocationManager?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // [Optional] Power your app with Local Datastore. For more info, go to
@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize Parse.
         Parse.setApplicationId("SOssXeJUr1w8ZOl8vEzj44KUZBSkZtpI0hVLeAgK",
             clientKey: "GlofOfHtvT2ePmfVvuBVw1BC9A77rmiHz55uqbFZ")
-        
+        locationManager = CLLocationManager()
+        locationManager?.requestWhenInUseAuthorization()
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         return true

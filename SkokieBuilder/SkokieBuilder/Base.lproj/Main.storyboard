@@ -52,15 +52,6 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmT-wg-yHC">
-                                                    <rect key="frame" x="292" y="34" width="48" height="30"/>
-                                                    <state key="normal" title="Map It!">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="wKE-SN-W4k" kind="show" id="Elp-Kc-Yag"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -89,15 +80,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Get Involved" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <segue destination="wKE-SN-W4k" kind="show" identifier="pushMap" id="OwN-Zv-hJC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776.5" y="-320.5"/>
+            <point key="canvasLocation" x="725.5" y="-320.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="zGx-hJ-tms">
             <objects>
-                <viewController id="wKE-SN-W4k" sceneMemberID="viewController">
+                <viewController id="wKE-SN-W4k" customClass="MapViewController" customModule="SkokieBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WLy-aN-Pk8"/>
                         <viewControllerLayoutGuide type="bottom" id="Ap8-GA-utF"/>
@@ -107,16 +101,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="395-wn-8YK">
-                                <rect key="frame" x="0.0" y="-6" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="39" width="375" height="628"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wKE-SN-W4k" id="zHF-bN-3nS"/>
+                                </connections>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mgm-AZ-1e8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Map" id="Mav-9t-pdO">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Esm-Df-5dB">
+                                            <connections>
+                                                <action selector="pushBack:" destination="wKE-SN-W4k" id="r09-NB-nPq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mapView" destination="395-wn-8YK" id="4No-Yj-8h1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYT-Fd-xVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1242.5" y="-320.5"/>
+            <point key="canvasLocation" x="1217.5" y="-320.5"/>
         </scene>
         <!--Redeem Points-->
         <scene sceneID="wg7-f3-ORb">

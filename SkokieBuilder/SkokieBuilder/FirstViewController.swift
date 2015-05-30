@@ -9,11 +9,14 @@ import Parse
 import UIKit
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    var obj = PFObject(className: "TestObject")
+    var restaurants = ["Annie's Pancake House","YOLO Mexican","Pita Inn","Libertad","Tub Tim Thai","Kabul House"]
+    var ratings = ["3.5","4.5","4","4.5","4","5"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let testObject = PFObject(className: "TestObject")
         
+    
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -25,11 +28,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
         
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-            var cell = tableView.dequeueReusableCellWithIdentifier("event") as! UITableViewCell
-        
+            var cell = tableView.dequeueReusableCellWithIdentifier("event") as! Cell
+            cell.name.text = restaurants[indexPath.row]
+            cell.rating.text = ratings[indexPath.row]
             return cell
-        
     }
 
     override func didReceiveMemoryWarning() {

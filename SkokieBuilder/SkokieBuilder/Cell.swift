@@ -10,6 +10,10 @@ import UIKit
 
 class Cell: UITableViewCell {
     
+    @IBOutlet var name: UILabel!
+    
+    @IBOutlet var rating: UILabel!
+    @IBOutlet var img: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

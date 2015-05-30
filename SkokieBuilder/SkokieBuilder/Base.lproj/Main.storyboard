@@ -100,17 +100,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="395-wn-8YK">
-                                <rect key="frame" x="0.0" y="39" width="375" height="628"/>
-                                <connections>
-                                    <outlet property="delegate" destination="wKE-SN-W4k" id="zHF-bN-3nS"/>
-                                </connections>
-                            </mapView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mgm-AZ-1e8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Map" id="Mav-9t-pdO">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Esm-Df-5dB">
+                                            <color key="tintColor" red="0.98823535439999999" green="0.96470594409999999" blue="0.96470594409999999" alpha="1" colorSpace="deviceRGB"/>
                                             <connections>
                                                 <action selector="pushBack:" destination="wKE-SN-W4k" id="r09-NB-nPq"/>
                                             </connections>
@@ -118,6 +120,12 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="395-wn-8YK">
+                                <rect key="frame" x="-2" y="42" width="381" height="610"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wKE-SN-W4k" id="zHF-bN-3nS"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -128,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYT-Fd-xVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1217.5" y="-320.5"/>
+            <point key="canvasLocation" x="1217.5" y="-325.5"/>
         </scene>
         <!--Redeem Points-->
         <scene sceneID="wg7-f3-ORb">

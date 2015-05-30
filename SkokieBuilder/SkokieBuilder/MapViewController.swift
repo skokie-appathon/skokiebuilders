@@ -14,7 +14,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBAction func pushBack(sender: AnyObject) {
         
-        
+        self.dismissViewControllerAnimated(true, completion: nil)
         
     }
     let locationManager = CLLocationManager()
